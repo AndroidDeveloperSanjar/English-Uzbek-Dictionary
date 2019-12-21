@@ -12,7 +12,7 @@
         <item
             android:id="@+id/settingsFragment"
             android:icon="@drawable/ic_settings_menu"
-            android:title="@string/nav_drawer_settings" />
+            android:title="@string/nav_drawer_settings"/>
         <item
             android:id="@+id/aboutFragment"
             android:icon="@drawable/ic_about_menu"
