@@ -6,6 +6,7 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+
     </style>
 
     <style name="NoActionBar" parent="AppTheme">
@@ -66,6 +67,18 @@
 
     <style name="RippleStyleBlack" parent="RippleStyleWhite">
         <item name="mrl_rippleColor">#8096989A</item>
+    </style>
+
+    <style name="NavigationDrawerStyle">
+        <item name="android:fontFamily">@font/fira_mono_bold</item>
+    </style>
+
+    <style name="TabLayout">
+        <item name="android:fontFamily">@font/fira_mono_bold</item>
+    </style>
+
+    <style name="EditText">
+        <item name="android:fontFamily">@font/fira_mono_bold</item>
     </style>
 
 </resources>

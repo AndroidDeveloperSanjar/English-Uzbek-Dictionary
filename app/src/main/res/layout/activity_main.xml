@@ -18,6 +18,7 @@
             android:background="#512DA8"
             android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
             app:contentInsetStartWithNavigation="0dp"
+            app:theme="@style/TabLayout"
             app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
         </androidx.appcompat.widget.Toolbar>
 
@@ -40,6 +41,7 @@
         android:layout_height="match_parent"
         android:layout_gravity="start"
         android:fitsSystemWindows="true"
+        app:theme="@style/NavigationDrawerStyle"
         app:headerLayout="@layout/nav_drawer_header"
         app:menu="@menu/main_drawer">
 
