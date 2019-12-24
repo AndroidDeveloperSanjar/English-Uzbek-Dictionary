@@ -8,11 +8,11 @@ import androidx.room.Query
 import com.example.dictionary.db.model.Words
 
 @Dao
-interface WordDao {
+interface EngWordDao {
     @Query("SELECT * from word_table ORDER BY word ASC")
-    fun getAlphabetizedWords(): LiveData<List<Words>>
+    fun getAlphabetizedEngWords(): LiveData<List<Words>>
 
     @Insert(onConflict = OnConflictStrategy.IGNORE)
-    suspend fun insert(wordList: ArrayList<Words>)
+    suspend fun insertEngWord(wordList: ArrayList<Words>)
 
 }

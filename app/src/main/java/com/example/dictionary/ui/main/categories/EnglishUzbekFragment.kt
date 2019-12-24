@@ -18,6 +18,7 @@ import com.example.dictionary.adapter.EngUzbAdapter
 import com.example.dictionary.db.model.Words
 import com.example.dictionary.ui.main.viewmodel.EngUzbViewModel
 import kotlinx.android.synthetic.main.fragment_english_uzbek.*
+import kotlinx.android.synthetic.main.material_dialog.*
 
 /**
  * A simple [Fragment] subclass.
@@ -49,6 +50,7 @@ EngUzbAdapter.Interaction{
 
     private fun initVM(){
         viewModel = ViewModelProvider(this)[EngUzbViewModel::class.java]
+        viewModel.insert(createWordsList())
     }
 
     private fun initRV() {
@@ -68,7 +70,7 @@ EngUzbAdapter.Interaction{
     }
 
     override fun onItemSelected(position: Int, item: Words) {
-        showRVItemDialog()
+            showRVItemDialog()
     }
 
     private fun showRVItemDialog(){
@@ -78,5 +80,24 @@ EngUzbAdapter.Interaction{
         dialog.show()
     }
 
-
+    private fun createWordsList(): ArrayList<Words> {
+        val wordsList = ArrayList<Words>()
+        wordsList.add(Words("aback"))
+        wordsList.add(Words("abacus"))
+        wordsList.add(Words("abandon"))
+        wordsList.add(Words("babe"))
+        wordsList.add(Words("baboon"))
+        wordsList.add(Words("baby"))
+        wordsList.add(Words("bacchanalian"))
+        wordsList.add(Words("baccy"))
+        wordsList.add(Words("bachelor"))
+        wordsList.add(Words("cabaret"))
+        wordsList.add(Words("cabbage"))
+        wordsList.add(Words("cabbie"))
+        wordsList.add(Words("dabble"))
+        wordsList.add(Words("dacha"))
+        wordsList.add(Words("dad"))
+        wordsList.add(Words("daddy"))
+        return wordsList
+    }
 }
