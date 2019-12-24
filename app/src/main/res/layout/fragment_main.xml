@@ -19,11 +19,15 @@
             android:layout_marginStart="@dimen/_10sdp"
             android:layout_marginEnd="@dimen/_10sdp"
             android:background="@drawable/search_et_back"
+            android:clickable="false"
+            android:cursorVisible="false"
             android:drawableRight="@drawable/ic_search"
-            android:hint="Search words..."
+            android:fontFamily="@font/carme"
+            android:hint="@string/search_words"
+            android:selectAllOnFocus="false"
             android:singleLine="true"
-            app:theme="@style/EditText"
-            android:textColorHint="@color/searchEtHintColor" />
+            android:textColorHint="@color/searchEtHintColor"
+            app:theme="@style/TabLayout" />
     </RelativeLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout

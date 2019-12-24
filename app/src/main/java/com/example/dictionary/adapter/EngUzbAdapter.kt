@@ -7,19 +7,19 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.AsyncListDiffer
 import androidx.recyclerview.widget.DiffUtil
 import com.example.dictionary.R
-import com.example.dictionary.models.Word
+import com.example.dictionary.db.model.Words
 import kotlinx.android.synthetic.main.eng_uzb_list_item.view.*
 
 class EngUzbAdapter(private val interaction: Interaction? = null) :
     RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
-    private val diffCallBack = object : DiffUtil.ItemCallback<Word>() {
+    private val diffCallBack = object : DiffUtil.ItemCallback<Words>() {
 
-        override fun areItemsTheSame(oldItem: Word, newItem: Word): Boolean {
-            return oldItem.id == newItem.id
+        override fun areItemsTheSame(oldItem: Words, newItem: Words): Boolean {
+            return oldItem == newItem
         }
 
-        override fun areContentsTheSame(oldItem: Word, newItem: Word): Boolean {
+        override fun areContentsTheSame(oldItem: Words, newItem: Words): Boolean {
            return oldItem == newItem
         }
 
@@ -51,7 +51,7 @@ class EngUzbAdapter(private val interaction: Interaction? = null) :
         return differ.currentList.size
     }
 
-    fun submitList(list: List<Word>) {
+    fun submitList(list: List<Words>) {
         differ.submitList(list)
     }
 
@@ -61,7 +61,7 @@ class EngUzbAdapter(private val interaction: Interaction? = null) :
         private val interaction: Interaction?
     ) : RecyclerView.ViewHolder(itemView) {
 
-        fun bind(item: Word) = with(itemView) {
+        fun bind(item: Words) = with(itemView) {
             itemView.setOnClickListener {
                 interaction?.onItemSelected(adapterPosition, item)
             }
@@ -70,6 +70,6 @@ class EngUzbAdapter(private val interaction: Interaction? = null) :
     }
 
     interface Interaction {
-        fun onItemSelected(position: Int, item: Word)
+        fun onItemSelected(position: Int, item: Words)
     }
 }

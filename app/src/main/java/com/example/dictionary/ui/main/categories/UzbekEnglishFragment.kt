@@ -10,8 +10,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 
 import com.example.dictionary.R
 import com.example.dictionary.adapter.UzbEngAdapter
-import com.example.dictionary.models.DataSourceForUzbekEnglish
-import com.example.dictionary.models.Word
+import com.example.dictionary.db.model.Words
 import com.example.dictionary.util.toast
 import kotlinx.android.synthetic.main.fragment_uzbek_english.*
 
@@ -35,7 +34,7 @@ UzbEngAdapter.Interaction{
 
     private fun init() {
         initRv()
-        addDataSet()
+       // addDataSet()
     }
 
     private fun initRv() {
@@ -46,12 +45,12 @@ UzbEngAdapter.Interaction{
         }
     }
 
-    private fun addDataSet() {
-        val data = DataSourceForUzbekEnglish.createDataSet()
-        uzbEngAdapter.submitList(data)
-    }
+//    private fun addDataSet() {
+//        val data = DataSourceForUzbekEnglish.createDataSet()
+//        uzbEngAdapter.submitList(data)
+//    }
 
-    override fun onItemSelected(position: Int, item: Word) {
+    override fun onItemSelected(position: Int, item: Words) {
         toast("position : #$position")
     }
 

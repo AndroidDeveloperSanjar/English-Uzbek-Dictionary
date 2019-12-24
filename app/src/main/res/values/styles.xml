@@ -69,16 +69,12 @@
         <item name="mrl_rippleColor">#8096989A</item>
     </style>
 
-    <style name="NavigationDrawerStyle">
-        <item name="android:fontFamily">@font/fira_mono_bold</item>
-    </style>
-
     <style name="TabLayout">
         <item name="android:fontFamily">@font/fira_mono_bold</item>
     </style>
 
     <style name="EditText">
-        <item name="android:fontFamily">@font/fira_mono_bold</item>
+        <item name="android:fontFamily">@font/carme</item>
     </style>
 
 </resources>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_margin="@dimen/_10sdp"
+    android:layout_height="@dimen/_165sdp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/tv_dialog_eng_word"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:fontFamily="@font/fira_mono_bold"
+            android:text="abandon"
+            android:textColor="#3F51B5"
+            android:textSize="@dimen/_20ssp" />
+        <Button
+            android:layout_width="@dimen/_67sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:text="save"
+            android:textAllCaps="false"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:background="@drawable/back_btn"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="@dimen/_10sdp"/>
+
+        <TextView
+            android:id="@+id/tv_read"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="[e'baenden]"
+            android:layout_below="@+id/tv_dialog_eng_word"
+            android:layout_marginStart="@dimen/_20sdp"/>
+        <TextView
+            android:id="@+id/tv_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="verb"
+            android:textStyle="italic"
+            android:textColor="#FF3D00"
+            android:layout_below="@+id/tv_read"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_5sdp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1) tashlab ketmoq, tark etmoq \n2) to'xtatmoq, xoriga yetkazmaslik\n-abandonment n tashlab ketish, tark\netish;\nto'xtatish, xoriga yetkazmaslik"
+            android:layout_below="@+id/tv_type"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:textSize="@dimen/_15ssp"
+            android:fontFamily="@font/carme"/>
+
+
+
+    </RelativeLayout>
+
+</LinearLayout>
